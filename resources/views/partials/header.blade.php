@@ -1,3 +1,8 @@
+@php
+    $main_menu = config('menues.header_menu');
+@endphp
+
+
 <header>
     <div class="container">
         <a href=" {{ route('home') }} " class="logo">
@@ -6,16 +11,11 @@
 
         <nav>
             <ul>
-                <li><a href=" {{ route('about') }} ">ABOUT</a></li>
-                <li><a href=" {{ route('contact') }} ">CONTACT</a></li>
-                <li><a href="#">MOVIES</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">GAMES</a></li>
-                <li><a href="#">COLLECTIBLES</a></li>
-                <li><a href="#">VIDEOS</a></li>
-                <li><a href="#">FANS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">SHOP</a></li>
+                @foreach ( $main_menu as $item )
+
+                <li><a href=" {{ route( $item['name'] ) }} "> {{ $item['text'] }} </a></li>
+
+                @endforeach
             </ul>
         </nav>
 
