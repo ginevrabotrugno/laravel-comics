@@ -14,15 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $cards = config('cards');
+
+    return view('home', compact('cards'));
 })->name('home');
 
 Route::get('/about', function () {
-    return view('about');
+
+    $cards = config('cards');
+
+    return view('about', compact('cards'));
 })->name('about');
 
 Route::get('/contact', function () {
-    return view('contact');
+
+    $cards = config('cards');
+
+    return view('contact', compact('cards'));
 })->name('contact');
 
 
