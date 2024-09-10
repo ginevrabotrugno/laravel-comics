@@ -126,7 +126,5 @@
 @endsection
 
 @section('title')
-    ABOUT
+    CONTACT
 @endsection
-
-

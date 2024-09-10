@@ -63,7 +63,7 @@
     <section class="sign-up">
         <div class="container">
 
-            <a href="#" class="button">
+            <a href="#" class="button_footer">
                 SIGN-UP NOW!
             </a>
 

@@ -1,13 +1,13 @@
 <header>
     <div class="container">
-        <a href="#" class="logo">
+        <a href=" {{ route('home') }} " class="logo">
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo">
         </a>
 
         <nav>
             <ul>
-                <li><a href="#">CHARACTERS</a></li>
-                <li><a href="#">COMICS</a></li>
+                <li><a href=" {{ route('about') }} ">ABOUT</a></li>
+                <li><a href=" {{ route('contact') }} ">CONTACT</a></li>
                 <li><a href="#">MOVIES</a></li>
                 <li><a href="#">TV</a></li>
                 <li><a href="#">GAMES</a></li>
