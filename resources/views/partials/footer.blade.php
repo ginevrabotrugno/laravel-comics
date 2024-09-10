@@ -1,3 +1,18 @@
+@php
+    $dc_comics = config('menues.footer_menu.dc_comics.items');
+    $dc_comics_title = config('menues.footer_menu.dc_comics.title');
+
+    $shop = config('menues.footer_menu.shop.items');
+    $shop_title = config('menues.footer_menu.shop.title');
+
+    $dc = config('menues.footer_menu.dc.items');
+    $dc_title = config('menues.footer_menu.dc.title');
+
+    $sites = config('menues.footer_menu.sites.items');
+    $sites_title = config('menues.footer_menu.sites.title');
+
+@endphp
+
 <footer>
     <section class="links">
         <div class="container">
@@ -5,55 +20,50 @@
             <ul>
                 <li>
                     <h3>
-                        DC COMICS
+                        {{ $dc_comics_title }}
                     </h3>
                     <ul>
-                        <li><a href="#">Characters</a></li>
-                        <li><a href="#">Comics</a></li>
-                        <li><a href="#">Movies</a></li>
-                        <li><a href="#">TV</a></li>
-                        <li><a href="#">Games</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">News</a></li>
+                        @foreach ( $dc_comics as $link )
+
+                        <li><a href="#"> {{ $link['text'] }} </a></li>
+
+                        @endforeach
                     </ul>
                 </li>
                 <li>
                     <h3>
-                        SHOP
+                        {{ $shop_title }}
                     </h3>
                     <ul>
-                        <li><a href="#">Shop DC</a></li>
-                        <li><a href="#">Shop DC Collectibles</a></li>
+                        @foreach ( $shop as $link )
+
+                        <li><a href="#"> {{ $link['text'] }} </a></li>
+
+                        @endforeach
                     </ul>
                 </li>
                 <li>
                     <h3>
-                        DC
+                        {{ $dc_title }}
                     </h3>
                     <ul>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Add Choices</a></li>
-                        <li><a href="#">Advertizing</a></li>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Subscriptions</a></li>
-                        <li><a href="#">Talent Workshops</a></li>
-                        <li><a href="#">CPSC Certificates</a></li>
-                        <li><a href="#">Ratings</a></li>
-                        <li><a href="#">Shop Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        @foreach ( $dc as $link )
+
+                        <li><a href="#"> {{ $link['text'] }} </a></li>
+
+                        @endforeach
                     </ul>
                 </li>
                 <li>
                     <h3>
-                        SITES
+                        {{ $sites_title }}
                     </h3>
                     <ul>
-                        <li><a href="#">DC</a></li>
-                        <li><a href="#">MAD Magazine</a></li>
-                        <li><a href="#">DC Kids</a></li>
-                        <li><a href="#">DC Universe</a></li>
-                        <li><a href="#">DC Power Visa</a></li>
+                        @foreach ( $sites as $link )
+
+                        <li><a href="#"> {{ $link['text'] }} </a></li>
+
+                        @endforeach
                     </ul>
                 </li>
             </ul>
