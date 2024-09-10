@@ -13,7 +13,7 @@
             <ul>
                 @foreach ( $main_menu as $item )
 
-                <li><a href=" {{ route( $item['name'] ) }} "> {{ $item['text'] }} </a></li>
+                <li class="{{Route::currentRouteName() === $item['name'] ? 'active' : ''}}"><a href=" {{ route( $item['name'] ) }} "> {{ $item['text'] }} </a></li>
 
                 @endforeach
             </ul>
