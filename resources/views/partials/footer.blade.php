@@ -1,15 +1,19 @@
 @php
-    $dc_comics = config('menues.footer_menu.dc_comics.items');
-    $dc_comics_title = config('menues.footer_menu.dc_comics.title');
+    // $dc_comics = config('menues.footer_menu.dc_comics');
+    // // $dc_comics_title = config('menues.footer_menu.dc_comics.title');
 
-    $shop = config('menues.footer_menu.shop.items');
-    $shop_title = config('menues.footer_menu.shop.title');
+    // $shop = config('menues.footer_menu.shop');
+    // // $shop_title = config('menues.footer_menu.shop.title');
 
-    $dc = config('menues.footer_menu.dc.items');
-    $dc_title = config('menues.footer_menu.dc.title');
+    // $dc = config('menues.footer_menu.dc.items');
+    // $dc_title = config('menues.footer_menu.dc.title');
 
-    $sites = config('menues.footer_menu.sites.items');
-    $sites_title = config('menues.footer_menu.sites.title');
+    // $sites = config('menues.footer_menu.sites.items');
+    // $sites_title = config('menues.footer_menu.sites.title');
+
+    $footer_menues = config('menues.footer_menu');
+
+    // dd(config('menues.footer_menu'));
 
 @endphp
 
@@ -18,54 +22,21 @@
         <div class="container">
 
             <ul>
+                @foreach ( $footer_menues as $footer_menu )
                 <li>
                     <h3>
-                        {{ $dc_comics_title }}
+                        {{ $footer_menu['title'] }}
                     </h3>
                     <ul>
-                        @foreach ( $dc_comics as $link )
+                        @foreach ( $footer_menu['items'] as $link )
 
                         <li><a href="#"> {{ $link['text'] }} </a></li>
 
                         @endforeach
                     </ul>
                 </li>
-                <li>
-                    <h3>
-                        {{ $shop_title }}
-                    </h3>
-                    <ul>
-                        @foreach ( $shop as $link )
 
-                        <li><a href="#"> {{ $link['text'] }} </a></li>
-
-                        @endforeach
-                    </ul>
-                </li>
-                <li>
-                    <h3>
-                        {{ $dc_title }}
-                    </h3>
-                    <ul>
-                        @foreach ( $dc as $link )
-
-                        <li><a href="#"> {{ $link['text'] }} </a></li>
-
-                        @endforeach
-                    </ul>
-                </li>
-                <li>
-                    <h3>
-                        {{ $sites_title }}
-                    </h3>
-                    <ul>
-                        @foreach ( $sites as $link )
-
-                        <li><a href="#"> {{ $link['text'] }} </a></li>
-
-                        @endforeach
-                    </ul>
-                </li>
+                @endforeach
             </ul>
 
         </div>

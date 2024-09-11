@@ -21,17 +21,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
-
-    $cards = config('cards');
-
-    return view('about', compact('cards'));
+    return view('about');
 })->name('about');
 
 Route::get('/contact', function () {
-
-    $cards = config('cards');
-
-    return view('contact', compact('cards'));
+    return view('contact');
 })->name('contact');
 
 
