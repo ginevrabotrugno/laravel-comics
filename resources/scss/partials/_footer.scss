@@ -1,5 +1,5 @@
 .links {
-    background-image: url("/resources/img/footer-bg.jpg");
+    background-image: url("../img/footer-bg.jpg");
     background-size: cover;
     padding: 20px 0;
     overflow: hidden;
@@ -45,7 +45,7 @@
         }
 
         &::after {
-            content: url("/resources/img/dc-logo-bg.png");
+            content: url("../img/dc-logo-bg.png");
             object-fit: cover;
             position: absolute;
             top: -81px;
